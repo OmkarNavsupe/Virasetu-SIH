@@ -134,6 +134,37 @@ class VirasetuAPI:
 
         try:
             # ----------------------------------------------------
+            # 0. /api/health — diagnostic endpoint
+            # ----------------------------------------------------
+            if path == "/api/health" and method == "GET":
+                import sys, platform
+                from backend.config import DB_PATH, STATIC_DIR, FRONTEND_DIR
+                db_ok = False
+                db_error = None
+                try:
+                    from backend.database import ensure_db_initialized
+                    ensure_db_initialized()
+                    sites = query_all("SELECT COUNT(*) as c FROM heritage_sites")
+                    db_ok = True
+                    site_count = sites[0]["c"] if sites else 0
+                except Exception as e:
+                    db_error = str(e)
+                    site_count = 0
+                return self._json_response(start_response, {
+                    "status": "ok" if db_ok else "degraded",
+                    "python": sys.version,
+                    "platform": platform.platform(),
+                    "db_path": DB_PATH,
+                    "db_ok": db_ok,
+                    "db_error": db_error,
+                    "site_count": site_count,
+                    "schema_file_exists": os.path.isfile(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "database", "schema.sql")),
+                    "index_html_exists": os.path.isfile(os.path.join(FRONTEND_DIR, "index.html")),
+                    "static_dir_exists": os.path.isdir(STATIC_DIR),
+                    "env_vercel": bool(os.environ.get("VERCEL") or os.environ.get("VERCEL_ENV")),
+                })
+
+            # ----------------------------------------------------
             # 1. /api/heritage
             # ----------------------------------------------------
             if path == "/api/heritage" and method == "GET":
