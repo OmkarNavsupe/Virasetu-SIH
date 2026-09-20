@@ -468,9 +468,21 @@ INITIAL_PASSPORT_ENTRIES = [
 ]
 
 
-def init_db(force_reset=False):
-    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
+def init_db(force_reset=False, db_path=None):
+    """Initialize and seed the database.
+
+    Args:
+        force_reset: If True, wipe all existing data before seeding.
+        db_path: Override the DB file path (e.g. '/tmp/virasetu.db' on Vercel).
+                 Falls back to the module-level DB_PATH (local dev default).
+    """
+    target_db = db_path or DB_PATH
+    db_dir = os.path.dirname(target_db)
+    # Only create the directory if it doesn't already exist and is non-empty
+    # (/tmp always exists on Vercel so makedirs would fail with PermissionError)
+    if db_dir and not os.path.exists(db_dir):
+        os.makedirs(db_dir, exist_ok=True)
+    conn = sqlite3.connect(target_db)
     cursor = conn.cursor()
 
     with open(SCHEMA_PATH, "r", encoding="utf-8") as f:

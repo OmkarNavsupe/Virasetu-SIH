@@ -5,7 +5,6 @@ Provides managed SQLite connections, query execution, and dictionary serializati
 
 import sqlite3
 from backend.config import DB_PATH
-from database.seed_data import init_db
 
 
 def get_db_connection():
@@ -17,17 +16,26 @@ def get_db_connection():
 
 def ensure_db_initialized():
     """Verifies that the database has tables and data; auto-initializes if missing."""
+    # Lazy import: avoids crashing the whole module if seed_data has any issue
+    from database.seed_data import init_db
     conn = get_db_connection()
     try:
         cursor = conn.cursor()
         cursor.execute("SELECT COUNT(*) FROM heritage_sites")
         count = cursor.fetchone()[0]
         if count == 0:
-            init_db()
+            conn.close()
+            init_db(db_path=DB_PATH)
+            return
     except sqlite3.OperationalError:
-        init_db()
-    finally:
         conn.close()
+        init_db(db_path=DB_PATH)
+        return
+    finally:
+        try:
+            conn.close()
+        except Exception:
+            pass
 
 
 def query_all(query, params=()):
