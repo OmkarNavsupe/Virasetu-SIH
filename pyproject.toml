@@ -1,3 +1,0 @@
-# pyproject.toml — Virasetu
-# Note: Vercel's Python runtime reads entrypoint from vercel.json "builds[].src",
-# not from [tool.vercel]. The old [tool.vercel] block was silently ignored.
