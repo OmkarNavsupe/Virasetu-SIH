@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="silkPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4C1D95"/>
+      <stop offset="50%" stop-color="#5B21B6"/>
+      <stop offset="100%" stop-color="#311068"/>
+    </linearGradient>
+    <linearGradient id="goldZari" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#FDE047"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <!-- Pure Silk Texture Background -->
+  <rect width="600" height="400" fill="url(#silkPurple)"/>
+  
+  <!-- Royal Gold Zari Border (Top & Bottom) -->
+  <rect x="0" y="0" width="600" height="35" fill="url(#goldZari)"/>
+  <rect x="0" y="365" width="600" height="35" fill="url(#goldZari)"/>
+  
+  <!-- Intricate Zari Pallu (Right Section) -->
+  <rect x="420" y="35" width="180" height="330" fill="url(#goldZari)"/>
+  <line x1="420" y1="35" x2="420" y2="365" stroke="#78350F" stroke-width="3"/>
+  <line x1="435" y1="35" x2="435" y2="365" stroke="#B45309" stroke-width="1.5"/>
+
+  <!-- Iconic Morbangadi (Peacock Bangle Motif) in Pallu -->
+  <g transform="translate(510, 200)">
+    <!-- Golden Bangle Circle -->
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#78350F" stroke-width="4"/>
+    <circle cx="0" cy="0" r="48" fill="#4C1D95"/>
+    <!-- Peacock Body -->
+    <path d="M -15 15 Q -25 -10 -5 -25 Q 15 -10 5 15 Z" fill="#0284C7"/>
+    <circle cx="-5" cy="-28" r="6" fill="#0369A1"/>
+    <!-- Peacock Crest -->
+    <line x1="-5" y1="-34" x2="-10" y2="-42" stroke="#F59E0B" stroke-width="1.5"/>
+    <line x1="-5" y1="-34" x2="-5" y2="-44" stroke="#F59E0B" stroke-width="1.5"/>
+    <line x1="-5" y1="-34" x2="0" y2="-42" stroke="#F59E0B" stroke-width="1.5"/>
+    <!-- Golden Wing & Tail -->
+    <path d="M 0 5 Q 35 0 25 35 Q 5 25 0 5 Z" fill="#15803D"/>
+    <circle cx="18" cy="22" r="4" fill="#F59E0B"/>
+  </g>
+
+  <!-- Flowing Silk Body with Asawali (Floral Vine) Motifs -->
+  <g fill="url(#goldZari)">
+    <!-- Row 1 -->
+    <circle cx="100" cy="90" r="8"/>
+    <polygon points="100,75 106,85 94,85"/>
+    <circle cx="200" cy="90" r="8"/>
+    <polygon points="200,75 206,85 194,85"/>
+    <circle cx="300" cy="90" r="8"/>
+    <polygon points="300,75 306,85 294,85"/>
+
+    <!-- Row 2 -->
+    <circle cx="150" cy="180" r="12"/>
+    <circle cx="150" cy="180" r="6" fill="#4C1D95"/>
+    <polygon points="150,158 158,172 142,172"/>
+    <polygon points="150,202 158,188 142,188"/>
+    <polygon points="128,180 142,172 142,188"/>
+    <polygon points="172,180 158,172 158,188"/>
+
+    <circle cx="270" cy="180" r="12"/>
+    <circle cx="270" cy="180" r="6" fill="#4C1D95"/>
+    <polygon points="270,158 278,172 262,172"/>
+    <polygon points="270,202 278,188 262,188"/>
+    <polygon points="248,180 262,172 262,188"/>
+    <polygon points="292,180 278,172 278,188"/>
+
+    <!-- Row 3 -->
+    <circle cx="100" cy="270" r="8"/>
+    <polygon points="100,255 106,265 94,265"/>
+    <circle cx="200" cy="270" r="8"/>
+    <polygon points="200,255 206,265 194,265"/>
+    <circle cx="300" cy="270" r="8"/>
+    <polygon points="300,255 306,265 294,265"/>
+  </g>
+
+  <!-- Title Watermark -->
+  <text x="40" y="340" font-family="sans-serif" font-size="20" font-weight="bold" fill="#FEF08A" letter-spacing="1">PAITHANI WEAVING</text>
+  <text x="40" y="358" font-family="sans-serif" font-size="13" fill="#FDE047">Paithan, Maharashtra • 'Queen of Sarees' 2000-Yr Silk Craft</text>
+</svg>

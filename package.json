@@ -1,0 +1,27 @@
+{
+  "name": "virasetu",
+  "version": "1.0.0",
+  "description": "Virasetu - AI-Powered Heritage and Traditional Arts Platform",
+  "scripts": {
+    "start": "python3 app.py",
+    "dev": "python3 app.py",
+    "seed": "python3 database/seed_data.py"
+  },
+  "keywords": [
+    "heritage",
+    "indian-culture",
+    "traditional-arts",
+    "ai-vision",
+    "crafts",
+    "hackathon"
+  ],
+  "author": "Virasetu Team",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

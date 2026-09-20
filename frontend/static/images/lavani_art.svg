@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stageBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#831843"/>
+      <stop offset="50%" stop-color="#9D174D"/>
+      <stop offset="100%" stop-color="#4C0519"/>
+    </linearGradient>
+    <linearGradient id="sareeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+  </defs>
+  <!-- Dramatic Stage Lighting Background -->
+  <rect width="600" height="400" fill="url(#stageBg)"/>
+  
+  <!-- Warm Stage Spotlights -->
+  <polygon points="100,0 250,400 350,400 500,0" fill="#FEF08A" opacity="0.15"/>
+  <ellipse cx="300" cy="380" rx="200" ry="18" fill="#F59E0B" opacity="0.3"/>
+
+  <!-- Dholki Instrument (Traditional folk barrel drum) on Right -->
+  <g transform="translate(460, 310) rotate(-15)">
+    <!-- Barrel Shell -->
+    <ellipse cx="0" cy="0" rx="32" ry="55" fill="#78350F" stroke="#451A03" stroke-width="3"/>
+    <ellipse cx="-20" cy="0" rx="14" ry="48" fill="#FBBF24" stroke="#78350F" stroke-width="2"/>
+    <ellipse cx="20" cy="0" rx="14" ry="48" fill="#FEF3C7" stroke="#78350F" stroke-width="2"/>
+    <circle cx="20" cy="0" r="10" fill="#1C1917"/>
+    <!-- Tuning Ropes (Vadi) -->
+    <line x1="-20" y1="-45" x2="20" y2="0" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="20" y1="0" x2="-20" y2="45" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="-20" y1="0" x2="20" y2="-45" stroke="#FFFFFF" stroke-width="1.5"/>
+    <line x1="-20" y1="0" x2="20" y2="45" stroke="#FFFFFF" stroke-width="1.5"/>
+  </g>
+
+  <!-- Lavani Dancer (Graceful classical pose, Nauvari saree, Ghungroo) -->
+  <g transform="translate(260, 180)">
+    <!-- Traditional Floral Hair Bun (Ambada with Gajra) -->
+    <circle cx="0" cy="-68" r="22" fill="#1C1917"/>
+    <path d="M -22 -68 C -22 -90 22 -90 22 -68" fill="none" stroke="#FEF08A" stroke-width="6" stroke-linecap="round"/>
+    
+    <!-- Face & Expression (Abhinaya) -->
+    <circle cx="0" cy="-55" r="16" fill="#FED7AA"/>
+    <!-- Traditional Crescent Bindi (Chandrakor) -->
+    <path d="M -2 -62 Q 0 -66 2 -62" stroke="#DC2626" stroke-width="2.5" fill="none"/>
+    <circle cx="0" cy="-59" r="1.5" fill="#DC2626"/>
+    <!-- Nose ring (Nath) -->
+    <circle cx="-6" cy="-52" r="3" fill="none" stroke="#FBBF24" stroke-width="1.5"/>
+
+    <!-- Torso & Traditional Choli -->
+    <polygon points="-16,-38 16,-38 12,0 -12,0" fill="#15803D" stroke="#166534" stroke-width="2"/>
+    <!-- Gold necklace (Kolhapuri Saaj) -->
+    <path d="M -12 -34 Q 0 -22 12 -34" stroke="#FBBF24" stroke-width="3" fill="none"/>
+
+    <!-- Graceful Expressive Arms with Bangles (Chuda) -->
+    <path d="M -16 -35 Q -55 -60 -40 -90" stroke="#FED7AA" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <circle cx="-40" cy="-90" r="4" fill="#FED7AA"/>
+    <path d="M 16 -35 Q 50 -20 70 -50" stroke="#FED7AA" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <circle cx="70" cy="-50" r="4" fill="#FED7AA"/>
+    <!-- Green and Gold Bangles -->
+    <rect x="-32" y="-60" width="8" height="6" fill="#15803D"/>
+    <rect x="34" y="-35" width="8" height="6" fill="#FBBF24"/>
+
+    <!-- Flowing Nauvari Saree (Kashta pleats and vibrant swirl) -->
+    <path d="M -12 0 Q -45 60 -30 140 Q 0 160 30 140 Q 45 60 12 0 Z" fill="url(#sareeGrad)" stroke="#B45309" stroke-width="2"/>
+    <!-- Gold Zari Pallu Swirling Drape -->
+    <path d="M 12 0 Q 75 40 90 90 Q 60 110 30 90 Z" fill="#FBBF24" opacity="0.9"/>
+    
+    <!-- Dancing Feet with Ghungroos (Musical Brass Bells) -->
+    <rect x="-24" y="142" width="16" height="5" rx="2" fill="#FBBF24"/>
+    <circle cx="-20" cy="144" r="1.5" fill="#78350F"/>
+    <circle cx="-16" cy="144" r="1.5" fill="#78350F"/>
+    <ellipse cx="-16" cy="152" rx="10" ry="5" fill="#FED7AA"/>
+
+    <rect x="8" y="142" width="16" height="5" rx="2" fill="#FBBF24"/>
+    <circle cx="12" cy="144" r="1.5" fill="#78350F"/>
+    <circle cx="16" cy="144" r="1.5" fill="#78350F"/>
+    <ellipse cx="16" cy="152" rx="10" ry="5" fill="#FED7AA"/>
+  </g>
+
+  <!-- Title Watermark -->
+  <text x="50" y="340" font-family="sans-serif" font-size="20" font-weight="bold" fill="#FEF08A" letter-spacing="1">LAVANI FOLK DANCE</text>
+  <text x="50" y="358" font-family="sans-serif" font-size="13" fill="#FDE047">Maharashtra • Rhythmic Dholki Beats, Nauvari Elegance & Classical Abhinaya</text>
+</svg>

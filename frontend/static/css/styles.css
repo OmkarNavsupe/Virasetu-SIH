@@ -1,0 +1,114 @@
+/* Virasetu Custom Heritage Stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --color-terracotta: #C85A32;
+  --color-saffron: #D97706;
+  --color-sandstone: #FAF7F2;
+  --color-sandstone-dark: #F2ECE1;
+  --color-royal: #1E293B;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-sandstone);
+  color: #1F2937;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-heritage {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+/* Heritage Subtle Borders & Shadows */
+.heritage-card {
+  background: #FFFFFF;
+  border: 1px solid #EAE4D9;
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.heritage-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(200, 90, 50, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+}
+
+/* Scanner Animation for AI Image Processing */
+@keyframes scannerSweep {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 90%;
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.8;
+  }
+}
+
+.ai-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #D97706, #C85A32, transparent);
+  box-shadow: 0 0 12px #D97706;
+  animation: scannerSweep 2s ease-in-out infinite;
+}
+
+/* Passport Card Styling */
+.passport-container {
+  background: radial-gradient(circle at 10% 20%, #FFFDF9 0%, #F5EFE6 100%);
+  border: 2px solid #D6C7B2;
+  position: relative;
+}
+
+.stamp-badge {
+  border: 2px dashed #C85A32;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  transform: rotate(-3deg);
+  transition: transform 0.2s ease;
+}
+.stamp-badge:nth-child(even) {
+  transform: rotate(2deg);
+}
+.stamp-badge:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+/* Map Pin Pulse */
+@keyframes pulseMarker {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.map-marker {
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.map-marker:hover {
+  transform: translateY(-4px) scale(1.15);
+}

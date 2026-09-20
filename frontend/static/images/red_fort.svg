@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="delhiSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="50%" stop-color="#FED7AA"/>
+      <stop offset="100%" stop-color="#FECDD3"/>
+    </linearGradient>
+    <linearGradient id="sandstoneRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="50%" stop-color="#991B1B"/>
+      <stop offset="100%" stop-color="#7F1D1D"/>
+    </linearGradient>
+    <linearGradient id="marbleWhite" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#delhiSky)"/>
+
+  <!-- High Sandstone Walls Base -->
+  <rect x="0" y="320" width="600" height="80" fill="#450A0A"/>
+  <rect x="50" y="220" width="500" height="100" fill="url(#sandstoneRed)"/>
+  <!-- Wall crenellations -->
+  <g fill="#7F1D1D">
+    <rect x="60" y="210" width="15" height="10"/>
+    <rect x="90" y="210" width="15" height="10"/>
+    <rect x="120" y="210" width="15" height="10"/>
+    <rect x="150" y="210" width="15" height="10"/>
+    <rect x="435" y="210" width="15" height="10"/>
+    <rect x="465" y="210" width="15" height="10"/>
+    <rect x="495" y="210" width="15" height="10"/>
+    <rect x="525" y="210" width="15" height="10"/>
+  </g>
+
+  <!-- Left Octagonal Minaret Tower -->
+  <polygon points="170,320 180,140 220,140 230,320" fill="url(#sandstoneRed)"/>
+  <!-- Left Chhatri (Marble dome pavilion) -->
+  <rect x="175" y="130" width="50" height="10" fill="#7F1D1D"/>
+  <line x1="180" y1="130" x2="180" y2="110" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="195" y1="130" x2="195" y2="110" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="205" y1="130" x2="205" y2="110" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="220" y1="130" x2="220" y2="110" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M 175 110 C 175 90 225 90 225 110 Z" fill="url(#marbleWhite)"/>
+  <line x1="200" y1="90" x2="200" y2="78" stroke="#F59E0B" stroke-width="2"/>
+
+  <!-- Right Octagonal Minaret Tower -->
+  <polygon points="370,320 380,140 420,140 430,320" fill="url(#sandstoneRed)"/>
+  <!-- Right Chhatri -->
+  <rect x="375" y="130" width="50" height="10" fill="#7F1D1D"/>
+  <line x1="380" y1="130" x2="380" y2="110" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="395" y1="130" x2="395" y2="110" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="405" y1="130" x2="405" y2="110" stroke="#FFFFFF" stroke-width="2"/>
+  <line x1="420" y1="130" x2="420" y2="110" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M 375 110 C 375 90 425 90 425 110 Z" fill="url(#marbleWhite)"/>
+  <line x1="400" y1="90" x2="400" y2="78" stroke="#F59E0B" stroke-width="2"/>
+
+  <!-- Central Lahori Gate Main Rampart -->
+  <rect x="220" y="160" width="160" height="160" fill="url(#sandstoneRed)"/>
+  <!-- 7 Miniature Chhatris along parapet -->
+  <g fill="url(#marbleWhite)">
+    <circle cx="240" cy="155" r="5"/>
+    <circle cx="260" cy="155" r="5"/>
+    <circle cx="280" cy="155" r="5"/>
+    <circle cx="300" cy="155" r="5"/>
+    <circle cx="320" cy="155" r="5"/>
+    <circle cx="340" cy="155" r="5"/>
+    <circle cx="360" cy="155" r="5"/>
+  </g>
+
+  <!-- Lahori Gate Arch -->
+  <path d="M 265 320 L 265 240 C 265 200 335 200 335 240 L 335 320 Z" fill="#1C1917"/>
+
+  <!-- Tricolor National Flag Mast atop Lahori Gate -->
+  <line x1="300" y1="150" x2="300" y2="70" stroke="#E2E8F0" stroke-width="3"/>
+  <rect x="300" y="70" width="40" height="6" fill="#EA580C"/>
+  <rect x="300" y="76" width="40" height="6" fill="#FFFFFF"/>
+  <circle cx="320" cy="79" r="2.5" fill="#1E3A8A"/>
+  <rect x="300" y="82" width="40" height="6" fill="#16A34A"/>
+
+  <!-- Title Watermark -->
+  <text x="30" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#7F1D1D" letter-spacing="1">RED FORT (LAL QILA)</text>
+  <text x="30" y="72" font-family="sans-serif" font-size="14" fill="#991B1B">Old Delhi • Shah Jahan 1648 CE (Independence Day Memorial)</text>
+</svg>

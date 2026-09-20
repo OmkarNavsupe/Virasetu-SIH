@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="parchmentBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="50%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <!-- Handmade Paper / Scroll Background -->
+  <rect width="600" height="400" fill="url(#parchmentBg)"/>
+  
+  <!-- Thick Folk Scroll Border -->
+  <rect x="25" y="25" width="550" height="350" fill="none" stroke="#78350F" stroke-width="4"/>
+  <rect x="35" y="35" width="530" height="330" fill="none" stroke="#B45309" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- Thakar Puppet Master (Silhouette Left) -->
+  <g fill="#1F2937" opacity="0.85">
+    <ellipse cx="120" cy="280" rx="35" ry="50"/>
+    <circle cx="120" cy="210" r="20"/>
+    <!-- Turban (Pheta) -->
+    <path d="M 100 205 Q 120 180 145 200 Q 130 170 110 185 Z" fill="#DC2626"/>
+    <!-- Arm holding puppet rod -->
+    <path d="M 140 250 L 210 200" stroke="#1F2937" stroke-width="6" stroke-linecap="round"/>
+    <line x1="210" y1="200" x2="230" y2="160" stroke="#78350F" stroke-width="4"/>
+  </g>
+
+  <!-- Traditional Leather Shadow Puppet Character (Center Hero - Warrior Prince) -->
+  <g transform="translate(320, 180)">
+    <!-- Ornate Crown (Mukut) -->
+    <polygon points="0,-95 -25,-60 25,-60" fill="#EA580C" stroke="#78350F" stroke-width="2"/>
+    <circle cx="0" cy="-98" r="4" fill="#FBBF24"/>
+    <circle cx="-15" cy="-70" r="3" fill="#FBBF24"/>
+    <circle cx="15" cy="-70" r="3" fill="#FBBF24"/>
+    
+    <!-- Face (Bold folk stylized profile) -->
+    <path d="M 0 -60 Q -30 -30 -15 0 Q 0 10 20 0 Q 30 -30 0 -60 Z" fill="#F97316" stroke="#78350F" stroke-width="3"/>
+    <!-- Large Expressive Eye (Lotus eye) -->
+    <ellipse cx="5" cy="-30" rx="10" ry="7" fill="#FFFFFF" stroke="#78350F" stroke-width="2"/>
+    <circle cx="7" cy="-30" r="4" fill="#18181B"/>
+    <!-- Distinctive Mustache & Tilak -->
+    <path d="M -5 -15 Q 15 -10 25 -20" stroke="#18181B" stroke-width="3" fill="none"/>
+    <line x1="0" y1="-50" x2="0" y2="-38" stroke="#DC2626" stroke-width="3"/>
+
+    <!-- Royal Torso & Ornate Armor -->
+    <polygon points="-35,10 35,10 25,80 -25,80" fill="#DC2626" stroke="#78350F" stroke-width="3"/>
+    <circle cx="0" cy="35" r="12" fill="#FBBF24" stroke="#78350F" stroke-width="2"/>
+    
+    <!-- Articulated Puppet Arms -->
+    <line x1="-35" y1="20" x2="-75" y2="50" stroke="#F97316" stroke-width="8" stroke-linecap="round"/>
+    <line x1="-75" y1="50" x2="-60" y2="10" stroke="#F97316" stroke-width="7" stroke-linecap="round"/>
+    <!-- Bow / Weapon -->
+    <path d="M -70 -20 Q -95 40 -60 70" stroke="#78350F" stroke-width="4" fill="none"/>
+
+    <!-- Lower Royal Dhoti & Garments -->
+    <polygon points="-25,80 25,80 40,150 -40,150" fill="#FBBF24" stroke="#78350F" stroke-width="3"/>
+    <line x1="0" y1="80" x2="0" y2="150" stroke="#DC2626" stroke-width="3"/>
+  </g>
+
+  <!-- Narrative Text Scrolls & Floral Vines on Top -->
+  <path d="M 50 60 Q 150 45 250 60 T 450 60 T 550 60" stroke="#78350F" stroke-width="2" fill="none"/>
+  
+  <!-- Title Watermark -->
+  <text x="50" y="340" font-family="sans-serif" font-size="20" font-weight="bold" fill="#78350F" letter-spacing="1">CHITRAKATHI</text>
+  <text x="50" y="358" font-family="sans-serif" font-size="13" fill="#92400E">Pinguli, Sindhudurg • Endangered Oral Narrative Scroll & Puppet Art</text>
+</svg>

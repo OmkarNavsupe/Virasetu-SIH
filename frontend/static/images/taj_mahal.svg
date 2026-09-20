@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tajSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0E7FF"/>
+      <stop offset="50%" stop-color="#FCE7F3"/>
+      <stop offset="100%" stop-color="#FEF3C7"/>
+    </linearGradient>
+    <linearGradient id="makranaMarble" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="poolReflect" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#tajSky)"/>
+
+  <!-- Plinth Terrace Platform -->
+  <rect x="120" y="270" width="360" height="20" fill="url(#makranaMarble)" stroke="#94A3B8" stroke-width="1"/>
+  
+  <!-- Symmetrical Four Freestanding Minarets -->
+  <!-- Far Left Minaret -->
+  <polygon points="125,270 128,110 138,110 141,270" fill="url(#makranaMarble)"/>
+  <rect x="126" y="105" width="14" height="6" fill="#94A3B8"/>
+  <circle cx="133" cy="100" r="5" fill="#FFFFFF"/>
+  <line x1="133" y1="95" x2="133" y2="88" stroke="#F59E0B" stroke-width="1.5"/>
+
+  <!-- Near Left Minaret -->
+  <polygon points="175,270 178,130 188,130 191,270" fill="url(#makranaMarble)"/>
+  <rect x="176" y="125" width="14" height="6" fill="#94A3B8"/>
+  <circle cx="183" cy="120" r="5" fill="#FFFFFF"/>
+  <line x1="183" y1="115" x2="183" y2="108" stroke="#F59E0B" stroke-width="1.5"/>
+
+  <!-- Near Right Minaret -->
+  <polygon points="409,270 412,130 422,130 425,270" fill="url(#makranaMarble)"/>
+  <rect x="410" y="125" width="14" height="6" fill="#94A3B8"/>
+  <circle cx="417" cy="120" r="5" fill="#FFFFFF"/>
+  <line x1="417" y1="115" x2="417" y2="108" stroke="#F59E0B" stroke-width="1.5"/>
+
+  <!-- Far Right Minaret -->
+  <polygon points="459,270 462,110 472,110 475,270" fill="url(#makranaMarble)"/>
+  <rect x="460" y="105" width="14" height="6" fill="#94A3B8"/>
+  <circle cx="467" cy="100" r="5" fill="#FFFFFF"/>
+  <line x1="467" y1="95" x2="467" y2="88" stroke="#F59E0B" stroke-width="1.5"/>
+
+  <!-- Main Mausoleum Central Block -->
+  <path d="M 210 270 L 210 170 L 230 170 L 230 155 L 370 155 L 370 170 L 390 170 L 390 270 Z" fill="url(#makranaMarble)" stroke="#CBD5E1" stroke-width="1"/>
+  
+  <!-- Central Grand Iwan Arch (Pishtaq) -->
+  <path d="M 255 270 L 255 190 C 255 165 345 165 345 190 L 345 270 Z" fill="#475569"/>
+  <path d="M 268 270 L 268 210 C 268 185 332 185 332 210 L 332 270 Z" fill="#1E293B"/>
+
+  <!-- Side Arch Niches -->
+  <path d="M 220 220 L 220 185 C 220 175 240 175 240 185 L 240 220 Z" fill="#64748B"/>
+  <path d="M 220 265 L 220 235 C 220 225 240 225 240 235 L 240 265 Z" fill="#64748B"/>
+  <path d="M 360 220 L 360 185 C 360 175 380 175 380 185 L 380 220 Z" fill="#64748B"/>
+  <path d="M 360 265 L 360 235 C 360 225 380 225 380 235 L 380 265 Z" fill="#64748B"/>
+
+  <!-- Two Smaller Flanking Domes (Guldastas) -->
+  <path d="M 235 155 C 235 130 255 130 255 155 Z" fill="url(#makranaMarble)"/>
+  <line x1="245" y1="130" x2="245" y2="120" stroke="#F59E0B" stroke-width="1.5"/>
+  <path d="M 345 155 C 345 130 365 130 365 155 Z" fill="url(#makranaMarble)"/>
+  <line x1="355" y1="130" x2="355" y2="120" stroke="#F59E0B" stroke-width="1.5"/>
+
+  <!-- Iconic Bulbous Central Marble Dome -->
+  <path d="M 260 155 C 255 105 275 80 300 70 C 325 80 345 105 340 155 Z" fill="url(#makranaMarble)"/>
+  <!-- Gold Finial & Lotus Crest -->
+  <line x1="300" y1="70" x2="300" y2="45" stroke="#F59E0B" stroke-width="3"/>
+  <circle cx="300" cy="45" r="3" fill="#F59E0B"/>
+  <circle cx="300" cy="55" r="2" fill="#F59E0B"/>
+
+  <!-- Charbagh Reflecting Pool & Garden -->
+  <rect x="0" y="290" width="600" height="110" fill="#15803D"/>
+  <!-- Center Water Channel -->
+  <polygon points="270,290 330,290 360,400 240,400" fill="url(#poolReflect)"/>
+  <line x1="300" y1="290" x2="300" y2="400" stroke="#BAE6FD" stroke-width="3"/>
+  <!-- Garden Cypress Trees -->
+  <polygon points="220,380 225,320 230,380" fill="#064E3B"/>
+  <polygon points="370,380 375,320 380,380" fill="#064E3B"/>
+  <polygon points="190,395 196,330 202,395" fill="#064E3B"/>
+  <polygon points="398,395 404,330 410,395" fill="#064E3B"/>
+
+  <!-- Title Watermark -->
+  <text x="30" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#0F172A" letter-spacing="1">TAJ MAHAL</text>
+  <text x="30" y="72" font-family="sans-serif" font-size="14" fill="#334155">Agra, Uttar Pradesh • UNESCO World Wonder 1653 CE</text>
+</svg>

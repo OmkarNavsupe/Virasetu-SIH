@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mumbaiSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FED7AA"/>
+      <stop offset="50%" stop-color="#FFEDD5"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+    <linearGradient id="basaltYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="50%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+  <!-- Coastal Sky -->
+  <rect width="600" height="400" fill="url(#mumbaiSky)"/>
+  
+  <!-- Gateway Basalt Pavement Plinth -->
+  <rect x="0" y="320" width="600" height="30" fill="#94A3B8"/>
+  <!-- Arabian Sea Waterfront -->
+  <rect x="0" y="350" width="600" height="50" fill="url(#seaGrad)"/>
+  <path d="M 0 355 Q 50 350 100 355 T 200 355 T 300 355 T 400 355 T 500 355 T 600 355" stroke="#E0F2FE" stroke-width="2" fill="none"/>
+  <path d="M 0 375 Q 60 370 120 375 T 240 375 T 360 375 T 480 375 T 600 375" stroke="#BAE6FD" stroke-width="1.5" fill="none"/>
+
+  <!-- Indo-Saracenic Gateway Structure -->
+  <!-- Left Wing -->
+  <rect x="130" y="180" width="80" height="140" fill="url(#basaltYellow)"/>
+  <rect x="120" y="160" width="100" height="20" fill="#78350F"/>
+  <path d="M 155 320 L 155 240 C 155 220 185 220 185 240 L 185 320 Z" fill="#451A03"/>
+  <circle cx="170" cy="140" r="14" fill="#92400E"/>
+  <polygon points="170,110 166,126 174,126" fill="#78350F"/>
+
+  <!-- Right Wing -->
+  <rect x="390" y="180" width="80" height="140" fill="url(#basaltYellow)"/>
+  <rect x="380" y="160" width="100" height="20" fill="#78350F"/>
+  <path d="M 415 320 L 415 240 C 415 220 445 220 445 240 L 445 320 Z" fill="#451A03"/>
+  <circle cx="430" cy="140" r="14" fill="#92400E"/>
+  <polygon points="430,110 426,126 434,126" fill="#78350F"/>
+
+  <!-- Central Great Arch Block -->
+  <rect x="210" y="120" width="180" height="200" fill="url(#basaltYellow)"/>
+  <rect x="195" y="100" width="210" height="20" fill="#78350F"/>
+  
+  <!-- Grand Central Triumphal Archway -->
+  <path d="M 245 320 L 245 220 C 245 160 355 160 355 220 L 355 320 Z" fill="#1E293B"/>
+  <path d="M 255 320 L 255 225 C 255 180 345 180 345 225 L 345 320 Z" fill="#0F172A"/>
+
+  <!-- Central 49-ft Majestic Dome -->
+  <path d="M 250 100 C 250 40 350 40 350 100 Z" fill="#92400E"/>
+  <line x1="300" y1="40" x2="300" y2="15" stroke="#F59E0B" stroke-width="4"/>
+  <circle cx="300" cy="15" r="4" fill="#F59E0B"/>
+
+  <!-- Gujarati Jali Carvings detail -->
+  <circle cx="300" cy="140" r="16" fill="none" stroke="#FEF3C7" stroke-width="2"/>
+  <line x1="284" y1="140" x2="316" y2="140" stroke="#FEF3C7" stroke-width="1.5"/>
+  <line x1="300" y1="124" x2="300" y2="156" stroke="#FEF3C7" stroke-width="1.5"/>
+
+  <!-- Title Watermark -->
+  <text x="30" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#78350F" letter-spacing="1">GATEWAY OF INDIA</text>
+  <text x="30" y="72" font-family="sans-serif" font-size="14" fill="#92400E">Mumbai Waterfront, Maharashtra • Estd 1924 CE</text>
+</svg>

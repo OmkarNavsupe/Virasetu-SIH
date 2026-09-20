@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="agaSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="60%" stop-color="#FEE2E2"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+    <linearGradient id="palaceStucco" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#agaSky)"/>
+  
+  <!-- Garden Trees backdrop -->
+  <circle cx="100" cy="240" r="60" fill="#15803D" opacity="0.6"/>
+  <circle cx="500" cy="240" r="60" fill="#15803D" opacity="0.6"/>
+  <circle cx="60" cy="260" r="50" fill="#166534" opacity="0.7"/>
+  <circle cx="540" cy="260" r="50" fill="#166534" opacity="0.7"/>
+
+  <!-- Palace Main Building Plinth -->
+  <rect x="80" y="220" width="440" height="110" fill="url(#palaceStucco)" stroke="#D97706" stroke-width="2"/>
+  
+  <!-- Italian Colonnade Arches Level 1 -->
+  <g fill="#78350F">
+    <path d="M 100 330 L 100 280 C 100 265 130 265 130 280 L 130 330 Z"/>
+    <path d="M 145 330 L 145 280 C 145 265 175 265 175 280 L 175 330 Z"/>
+    <path d="M 190 330 L 190 280 C 190 265 220 265 220 280 L 220 330 Z"/>
+    
+    <!-- Central Grand Entrance -->
+    <path d="M 270 330 L 270 260 C 270 240 330 240 330 260 L 330 330 Z" fill="#451A03"/>
+    
+    <path d="M 380 330 L 380 280 C 380 265 410 265 410 280 L 410 330 Z"/>
+    <path d="M 425 330 L 425 280 C 425 265 455 265 455 280 L 455 330 Z"/>
+    <path d="M 470 330 L 470 280 C 470 265 500 265 500 280 L 500 330 Z"/>
+  </g>
+
+  <!-- Upper Story Windows & Balustrades -->
+  <g fill="#B45309">
+    <rect x="105" y="235" width="20" height="25" rx="3"/>
+    <rect x="150" y="235" width="20" height="25" rx="3"/>
+    <rect x="195" y="235" width="20" height="25" rx="3"/>
+    <rect x="285" y="230" width="30" height="30" rx="4"/>
+    <rect x="385" y="235" width="20" height="25" rx="3"/>
+    <rect x="430" y="235" width="20" height="25" rx="3"/>
+    <rect x="475" y="235" width="20" height="25" rx="3"/>
+  </g>
+
+  <!-- Distinctive Sloping Red Terracotta Roofs -->
+  <polygon points="70,220 120,180 240,180 250,220" fill="#B91C1C"/>
+  <polygon points="350,220 360,180 480,180 530,220" fill="#B91C1C"/>
+  <!-- Central Grand Tower / Pediment -->
+  <polygon points="230,220 300,140 370,220" fill="#991B1B"/>
+  <rect x="285" y="160" width="30" height="25" fill="#FEF3C7" rx="2"/>
+
+  <!-- Manicured Forecourt Lawn -->
+  <rect x="0" y="330" width="600" height="70" fill="#16A34A"/>
+  <!-- Central Garden Walkway -->
+  <polygon points="260,400 340,400 320,330 280,330" fill="#E2E8F0"/>
+
+  <!-- Title Watermark -->
+  <text x="30" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#78350F" letter-spacing="1">AGA KHAN PALACE</text>
+  <text x="30" y="72" font-family="sans-serif" font-size="14" fill="#92400E">Pune, Maharashtra • Estd 1892 CE (Gandhi Memorial)</text>
+</svg>

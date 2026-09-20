@@ -1,0 +1,8 @@
+# Virasetu Backend Dependencies
+# Note: Virasetu includes a zero-dependency fallback engine that runs immediately with Python stdlib.
+# Installing these enables Flask features, CORS middleware, and API requests:
+
+flask>=3.0.0
+flask-cors>=4.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0

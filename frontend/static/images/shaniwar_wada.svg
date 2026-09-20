@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="60%" stop-color="#FDE68A"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="stoneWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4B5563"/>
+      <stop offset="50%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#1F2937"/>
+    </linearGradient>
+    <linearGradient id="woodGate" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350F"/>
+      <stop offset="50%" stop-color="#92400E"/>
+      <stop offset="100%" stop-color="#451A03"/>
+    </linearGradient>
+  </defs>
+  <!-- Warm Historic Sky -->
+  <rect width="600" height="400" fill="url(#skyGrad)"/>
+  <!-- Distant Hill & Clouds -->
+  <path d="M 0 280 Q 150 240 300 260 T 600 270 L 600 400 L 0 400 Z" fill="#D97706" opacity="0.35"/>
+  <!-- Shaniwar Wada Massive Stone Bastions -->
+  <!-- Left Bastion Tower -->
+  <path d="M 60 400 L 90 200 Q 120 190 150 200 L 170 400 Z" fill="url(#stoneWall)"/>
+  <rect x="75" y="185" width="85" height="18" rx="2" fill="#1F2937"/>
+  <!-- Bastion battlements -->
+  <rect x="80" y="175" width="12" height="12" fill="#1F2937"/>
+  <rect x="100" y="175" width="12" height="12" fill="#1F2937"/>
+  <rect x="120" y="175" width="12" height="12" fill="#1F2937"/>
+  <rect x="140" y="175" width="12" height="12" fill="#1F2937"/>
+  
+  <!-- Right Bastion Tower -->
+  <path d="M 430 400 L 450 200 Q 480 190 510 200 L 540 400 Z" fill="url(#stoneWall)"/>
+  <rect x="440" y="185" width="85" height="18" rx="2" fill="#1F2937"/>
+  <rect x="445" y="175" width="12" height="12" fill="#1F2937"/>
+  <rect x="465" y="175" width="12" height="12" fill="#1F2937"/>
+  <rect x="485" y="175" width="12" height="12" fill="#1F2937"/>
+  <rect x="505" y="175" width="12" height="12" fill="#1F2937"/>
+
+  <!-- Center Fortress Curtain Wall -->
+  <rect x="150" y="210" width="300" height="190" fill="url(#stoneWall)"/>
+  <!-- Upper battlements wall -->
+  <path d="M 150 210 L 150 195 L 450 195 L 450 210 Z" fill="#1F2937"/>
+  <g fill="#111827">
+    <rect x="165" y="185" width="16" height="12"/>
+    <rect x="195" y="185" width="16" height="12"/>
+    <rect x="225" y="185" width="16" height="12"/>
+    <rect x="255" y="185" width="16" height="12"/>
+    <rect x="285" y="185" width="16" height="12"/>
+    <rect x="315" y="185" width="16" height="12"/>
+    <rect x="345" y="185" width="16" height="12"/>
+    <rect x="375" y="185" width="16" height="12"/>
+    <rect x="405" y="185" width="16" height="12"/>
+  </g>
+
+  <!-- Famous Delhi Gate (Dilli Darwaza) -->
+  <path d="M 230 400 L 230 260 C 230 230 370 230 370 260 L 370 400 Z" fill="#111827"/>
+  <path d="M 245 400 L 245 270 C 245 250 355 250 355 270 L 355 400 Z" fill="url(#woodGate)"/>
+  <!-- Iron Spikes on Doors (To repel war elephants) -->
+  <g fill="#CBD5E1" stroke="#475569" stroke-width="0.5">
+    <polygon points="260,280 265,283 260,286"/>
+    <polygon points="280,280 285,283 280,286"/>
+    <polygon points="320,280 325,283 320,286"/>
+    <polygon points="340,280 345,283 340,286"/>
+    <polygon points="260,310 265,313 260,316"/>
+    <polygon points="280,310 285,313 280,316"/>
+    <polygon points="320,310 325,313 320,316"/>
+    <polygon points="340,310 345,313 340,316"/>
+    <polygon points="260,340 265,343 260,346"/>
+    <polygon points="280,340 285,343 280,346"/>
+    <polygon points="320,340 325,343 320,346"/>
+    <polygon points="340,340 345,343 340,346"/>
+    <polygon points="260,370 265,373 260,376"/>
+    <polygon points="280,370 285,373 280,376"/>
+    <polygon points="320,370 325,373 320,376"/>
+    <polygon points="340,370 345,373 340,376"/>
+  </g>
+
+  <!-- Maratha Saffron Flag (Bhagwa Jhenda) flying high -->
+  <line x1="300" y1="185" x2="300" y2="120" stroke="#78350F" stroke-width="4"/>
+  <polygon points="300,120 370,140 300,160" fill="#EA580C"/>
+  <circle cx="300" cy="118" r="3" fill="#F59E0B"/>
+
+  <!-- Plinth ground -->
+  <rect x="0" y="390" width="600" height="10" fill="#92400E"/>
+  <!-- Title Watermark -->
+  <text x="30" y="50" font-family="sans-serif" font-size="22" font-weight="bold" fill="#78350F" letter-spacing="1">SHANIWAR WADA</text>
+  <text x="30" y="72" font-family="sans-serif" font-size="14" fill="#92400E">Pune, Maharashtra • Estd 1732 CE</text>
+</svg>
