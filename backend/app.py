@@ -20,8 +20,30 @@ from backend.config import PORT, HOST, STATIC_DIR, FRONTEND_DIR
 from backend.database import ensure_db_initialized, query_all, query_one, execute_write
 from backend.services.ai_service import analyze_heritage_image, generate_chat_response, match_teachers
 
-# Ensure database is ready with seed data
-ensure_db_initialized()
+# Ensure database is ready with seed data.
+# Wrapped in try/except so a cold-start DB init failure doesn't crash every route;
+# the app will still load and retry initialization on the first request.
+try:
+    ensure_db_initialized()
+except Exception as _db_init_err:
+    import traceback
+    traceback.print_exc()
+    print(f"[Virasetu] WARNING: DB init at startup failed: {_db_init_err}. Will retry on first request.", flush=True)
+
+# Map of status code → standard HTTP reason phrase.
+# Using non-standard phrases (e.g. "404 Error") can cause Vercel's proxy
+# to emit a 502 Bad Gateway instead of forwarding the intended status.
+_STATUS_TEXT = {
+    200: "OK",
+    201: "Created",
+    204: "No Content",
+    400: "Bad Request",
+    401: "Unauthorized",
+    403: "Forbidden",
+    404: "Not Found",
+    405: "Method Not Allowed",
+    500: "Internal Server Error",
+}
 
 
 class VirasetuAPI:
@@ -71,8 +93,8 @@ class VirasetuAPI:
             ("Content-Type", "application/json; charset=utf-8"),
             ("Content-Length", str(len(body))),
         ] + self._cors_headers()
-        status_text = f"{status} OK" if status == 200 else f"{status} Error"
-        start_response(status_text, headers)
+        reason = _STATUS_TEXT.get(status, "Error")
+        start_response(f"{status} {reason}", headers)
         return [body]
 
     def _parse_body(self, environ):
@@ -327,19 +349,13 @@ class VirasetuAPI:
 
             # ----------------------------------------------------
             # 7. /api/quiz
+            # NOTE: Exact-match route (/api/quiz/submit) MUST appear BEFORE the
+            # startswith prefix match (/api/quiz/<id>) to prevent a shadowing bug
+            # where int("submit") raises an unhandled ValueError → 500.
             # ----------------------------------------------------
-            if path.startswith("/api/quiz/") and method == "GET":
-                heritage_id = path.replace("/api/quiz/", "").strip()
-                site = query_one("SELECT id, name FROM heritage_sites WHERE id = ?", (int(heritage_id),))
-                if not site:
-                    return self._json_response(start_response, {"success": False, "error": "Heritage site not found"}, status=404)
-
-                quizzes = query_all("SELECT id, heritage_id, question, option_a, option_b, option_c, option_d, correct_option, explanation FROM quizzes WHERE heritage_id = ?", (int(heritage_id),))
-                return self._json_response(start_response, {"success": True, "site": site, "questions": quizzes})
-
             if path == "/api/quiz/submit" and method == "POST":
                 heritage_id = int(body.get("heritage_id", 1))
-                answers = body.get("answers", {}) # {quiz_id: chosen_option}
+                answers = body.get("answers", {})  # {quiz_id: chosen_option}
 
                 site = query_one("SELECT id, name FROM heritage_sites WHERE id = ?", (heritage_id,))
                 quizzes = query_all("SELECT * FROM quizzes WHERE heritage_id = ?", (heritage_id,))
@@ -379,6 +395,20 @@ class VirasetuAPI:
                     "site_name": site["name"] if site else "Heritage Site",
                     "results": results
                 })
+
+            if path.startswith("/api/quiz/") and method == "GET":
+                raw_id = path.replace("/api/quiz/", "").strip()
+                try:
+                    heritage_id = int(raw_id)
+                except ValueError:
+                    return self._json_response(start_response, {"success": False, "error": f"Invalid heritage ID: '{raw_id}'"}, status=400)
+
+                site = query_one("SELECT id, name FROM heritage_sites WHERE id = ?", (heritage_id,))
+                if not site:
+                    return self._json_response(start_response, {"success": False, "error": "Heritage site not found"}, status=404)
+
+                quizzes = query_all("SELECT id, heritage_id, question, option_a, option_b, option_c, option_d, correct_option, explanation FROM quizzes WHERE heritage_id = ?", (heritage_id,))
+                return self._json_response(start_response, {"success": True, "site": site, "questions": quizzes})
 
             # ----------------------------------------------------
             # 8. /api/passport
@@ -491,7 +521,7 @@ class VirasetuAPI:
             start_response("200 OK", headers)
             return [content]
         except Exception as e:
-            start_response("500 Server Error", [("Content-Type", "text/plain")])
+            start_response("500 Internal Server Error", [("Content-Type", "text/plain")])
             return [str(e).encode("utf-8")]
 
     def _serve_spa(self, environ, start_response):
