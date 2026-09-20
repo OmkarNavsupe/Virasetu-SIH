@@ -6,7 +6,11 @@ Loads settings, database paths, and AI API keys.
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB_PATH = os.path.join(BASE_DIR, "database", "virasetu.db")
+
+# On Vercel the filesystem is read-only except /tmp — use /tmp there.
+# Locally, use the database/ folder as before.
+_is_vercel = os.environ.get("VERCEL") or os.environ.get("VERCEL_ENV")
+DB_PATH = "/tmp/virasetu.db" if _is_vercel else os.path.join(BASE_DIR, "database", "virasetu.db")
 STATIC_DIR = os.path.join(BASE_DIR, "frontend", "static")
 FRONTEND_DIR = os.path.join(BASE_DIR, "frontend")
 
